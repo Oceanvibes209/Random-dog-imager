@@ -9,4 +9,10 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-direction: column;
+}
+
+button{
+    height: 75px;
+    width:150px;
 }
