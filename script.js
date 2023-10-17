@@ -1,6 +1,7 @@
 
 const dogImageDiv = document.getElementById('dogImage')
 const dogButton = document.getElementById('dogButton')
+const audioPlayer = document.getElementById('audio-player')
 
 const getNewDog = async () => {
     try {
@@ -14,3 +15,15 @@ const getNewDog = async () => {
     }
 };
 dogButton.onclick = () => getNewDog()
+// Counter to keep track of the number of clicks
+let clickCount = 0;
+// Counter to keep track of the number of clicks
+dogButton.addEventListener("click", function () {
+    // Increment the click count
+    clickCount++;
+    // Check if it's the third click
+    if (clickCount % 3 === 0) {
+        // Play the audio
+        audioPlayer.play();
+    }
+});
